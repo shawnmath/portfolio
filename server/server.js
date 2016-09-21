@@ -17,11 +17,9 @@ var routes = require('./routes/index'),
 var app = express();
 
 //CONNECT DB
-mongoose.connect('mongodb://localhost:27017/portfolio', function(err){
-	if(err){
-		console.log(err);
-	}
-});
+// mongodb://shawn:portfolio@ds035846.mlab.com:35846/smathew_portfolio
+//mongoose.connect('mongodb://localhost:27017/portfolio');
+mongoose.connect('mongodb://shawn:portfolio@ds035846.mlab.com:35846/smathew_portfolio');
 
 mongoose.connection.on('open', function (ref) {
   console.log('Connected to Mongo server...');
