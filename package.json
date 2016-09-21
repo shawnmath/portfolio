@@ -4,7 +4,7 @@
   "private": true,
   "main": "server/server.js",
   "scripts": {
-    "start": "grunt"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "angular": "~1.5.8",
