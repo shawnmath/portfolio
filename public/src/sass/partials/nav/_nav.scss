@@ -1,0 +1,124 @@
+.nav {
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%;	
+	margin-bottom: 25px;
+	background-color: #000;
+
+
+	&--main {
+		position: relative;
+
+		&.ng-enter {
+			@include transition(all 1s ease-in);
+			opacity: 0;
+		}
+
+		&.ng-enter-active {
+			opacity: 1;
+		}	
+	}
+
+
+	> div {
+		@include outer-container;
+		padding: 15px 25px;	
+	}	
+
+
+	&-wrapper {		
+		@include span-columns(12);					
+		border-bottom: 1px solid #fff;		
+	}
+	
+
+	.name, .menu {
+		@include span-columns(6 of 12);
+	}
+
+
+	.name {
+		padding-bottom: 15px;
+
+		a {
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+
+	.menu {		
+		@include transition(background-color 0.5s ease, height 0.5s ease);
+		@include media($mobile){			
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+		}
+
+		&.mobileDisplay {	
+			height: 100%;
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		&__links {
+			float: right;
+			width: 50%;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			text-align: right;			
+			@include media($phablet){
+				width: 75%;
+			}
+			@include media($mobile){
+				position: absolute;
+				top: 25%;
+				float: none;				
+				display: none;				
+				width: 100%;
+				font-size: 3em;
+				text-align: center;
+			}
+
+			&__link {				
+				@include span-columns(4);
+				display: inline-block;
+				cursor: pointer;
+				@include media(641px){
+					opacity: 1;
+				}
+				@include media($mobile){
+					@include span-columns(12);
+					float: none;
+					opacity: 0;
+				}
+
+				a {
+
+					&:hover {
+						color: #fff;
+					}
+				}
+
+				&--home {
+					@include media(641px){
+						display: none;
+					}
+				}			
+
+				&.current {
+					@include media($mobile){
+						a {
+							color: $green;
+						}							
+					}					
+				} 
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+<section class="about page-content">	
+	<div class="about__img--wrapper">
+		<div class="about__img">
+			<img src="/imgs/about/sm.jpg">						
+		</div>
+		<div class="about__profile">
+			<div class="about__profile__links">
+				<a href="https://www.linkedin.com/in/shawnmathew322" target="_blank">
+					<i class="fa fa-2x fa-linkedin-square"></i>
+					<span>Linkedin</span>
+				</a>
+				<a href="#" target="_blank">
+					<i class="fa fa-2x fa-file-pdf-o"></i>
+					<span>Resume</span>
+				</a>
+			</div>
+		</div>	
+	</div>
+	<div class="about__info">
+		<p>I work with design teams and agencies as a web developer focusing on the front end of client sites and applications.  In addition to development, I help determine technical requirements for a project as well as estimate delivery time.
+		</p>		
+		<div class="improvement-list">
+			<p>I'm continuously trying to improve as a developer by staying up to date on modern web technologies including learning new workflows, frameworks and libraries. In particular, I'm interested in Javascript on both the client and server side.  I’ve recently became more familiar with:</p>			
+			<ul>
+				<li>using the BEM method for better CSS/SASS organization and maintenance</li>
+				<li>in Javascript:
+					<ul>
+						<li>module design pattern</li>
+						<li>MV** pattern</li>
+						<li>MEAN Stack - MongoDB, Express, Angular, Node.js</li>
+						<li>vanilla Javascript and fundamental concepts including this, scope, and closures</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="skills">
+			<p>Skills:</p>
+			<ul class="skills__list">
+				<li ng-repeat="skill in sl_0">{{skill}}</li>
+			</ul>
+			<ul class="skills__list">
+				<li ng-repeat="skill in sl_1">{{skill}}</li>
+			</ul>
+			<ul class="skills__list">
+				<li ng-repeat="skill in sl_2">{{skill}}</li>
+			</ul>
+		</div>
+		<div class="skills skills--css">
+			<p>CSS/SASS libraries I've worked with:</p>
+			<ul class="skills__list">
+				<li>Bourbon</li>
+				<li>Bourbon Neat</li>
+			</ul>
+			<ul class="skills__list">
+				<li>Twitter Bootstrap</li>
+				<li>Foundation</li>
+			</ul>
+		</div>
+		<div class="certs">
+			<p class="certs__intro">I'm a graduate of <a href="https://generalassemb.ly/education/front-end-web-development" target="_blank"> General Assembly's Front End Web Development</a> program and have earned certifications in <a href="http://www.marketmotive.com/web-analytics-training-courses//" target="_blank">Web Analytics</a>, <a href="http://www.marketmotive.com/conversion-optimization-training-courses//" target="_blank">Conversion Rate Optimization</a>, <a href="http://www.marketmotive.com/search-engine-optimization-seo-training-courses//" target="_blank">SEO</a>, and <a href="http://www.marketmotive.com/pay-per-click-ppc-training-courses//" target="_blank">PPC</a> from Market Motive.</p>			
+			<div class="certs__logos">
+				<a href="https://generalassemb.ly/education/front-end-web-development" target="_blank">
+					<img src="/imgs/certifications/general-assembly.png">					
+				</a>
+				<a href="http://www.marketmotive.com/web-analytics-training-courses//" target="_blank">
+					<img src="/imgs/certifications/mm-web-analytics.png">
+				</a>
+				<a href="http://www.marketmotive.com/conversion-optimization-training-courses//" target="_blank">
+					<img src="/imgs/certifications/mm-cro.png">
+				</a>
+				<a href="http://www.marketmotive.com/search-engine-optimization-seo-training-courses//" target="_blank">
+					<img src="/imgs/certifications/mm-seo.png">
+				</a>				
+				<a href="http://www.marketmotive.com/pay-per-click-ppc-training-courses//" target="_blank">
+					<img src="/imgs/certifications/mm-ppc.png">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="footer" ui-view="footer"></footer>

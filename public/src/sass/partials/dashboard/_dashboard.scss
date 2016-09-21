@@ -1,0 +1,79 @@
+.dashboard__wrapper {
+	@include clearfix;
+	margin-top: 125px;	
+}
+
+
+.db-header {
+	@include clearfix;	
+	padding: 15px 0;	
+	border-bottom: 1px solid #fff;
+
+	h1 {
+		display: inline-block;		
+		margin-top: 10px;
+	}
+
+	&__actions {
+		float: right;
+
+		&__item {
+			display: inline-block;
+
+			&--backHome {
+				margin-right: 15px;
+			}
+
+			&--addBtn {		
+				padding: 12px 24px;
+				text-decoration: none;
+				border: 1px solid #fff;
+				@include transition(all 0.2s ease);
+
+				&:hover {
+					color: #000;
+					background-color: #fff;
+				}
+			}
+		}		
+	}
+}
+
+
+.db-work {
+	@include span-columns(12);	
+
+	&__item {
+		margin-bottom: 40px;
+		@include clearfix;
+
+		&__content{
+			@include span-columns(8 of 12);
+			@include shift(2 of 12);
+			border-bottom: 1px solid #a7a7a7;
+		}
+
+		&__content {
+
+			h4 {
+				margin-top: 0;
+				text-decoration: underline;
+			}
+		}
+
+		&__actions {
+			
+			&--btn {
+				display: inline-block;
+				width: 150px;
+				max-width: 150px;
+				padding: 12px 24px;
+				margin-bottom: 15px;
+				text-align: center;
+				text-decoration: none;
+				border: 1px solid #fff;
+			}
+		}
+		
+	}
+}

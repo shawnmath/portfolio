@@ -1,0 +1,28 @@
+<section class="work page-content">			
+	<div class="work__wrapper">
+		<h1>{{work.title}}</h1>
+		<div class="work__img">
+			<div class="work__img--wrapper">
+				<img ng-src="/imgs/clients/{{work.image}}">	
+			</div>			
+			<div class="work__links">
+				<a ng-if="work.linkToSite" class="btn" href="{{work.linkToSite}}" target="_blank">
+					<span>View Site</span>
+				</a>
+				<a ng-if="work.linkToCode" class="btn" href="{{work.linkToCode}}" target="_blank">
+					<span>View Code</span>
+				</a>
+			</div>
+		</div>	
+		<div class="work__summary">			
+			<p ng-if="work.summary1">{{work.summary1}}</p>
+			<p ng-if="work.summary2">{{work.summary2}}</p>
+			<p ng-if="work.summary3">{{work.summary3}}</p>			
+		</div>		
+	</div>
+	<div class="breadcrumb">
+		<a class="breadcrumb__link" ui-sref="allWork">View All Client Work &rarr; </a>
+	</div>
+</section>
+
+<footer class="footer" ui-view="footer"></footer>

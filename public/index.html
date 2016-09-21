@@ -1,0 +1,22 @@
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Shawn Mathew Portfolio</title>	    
+	    <script src="https://use.fontawesome.com/c44ca227d7.js"></script>
+	    <link rel="stylesheet" href="dist/css/style.min.css">	    
+	</head>
+	<body ng-app="portfolio">
+	    <nav class="nav" role="navigation" ng-controller="NavCtrl">
+	    	<div class="nav--main" ng-if="pageType === 'main'" ng-include="'/src/js/views/nav.html'"></div>
+	    	<div ng-if="pageType === 'admin'" ng-include="'/src/js/views/dashboard/nav.html'"></div>
+	    </nav>
+
+	    <div class="main-wrapper">	    	
+	    	<div class="main" ui-view></div>
+	    </div>	    
+
+	    <script src="dist/js/vendor.min.js"></script>
+	    <script src="dist/js/app.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+.db-form {
+	margin-top: 125px;	
+
+	&__title {
+		display: inline-block;
+		margin-bottom: 25px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #a7a7a7;
+	}
+
+
+	&__form {
+		width: 50%;		
+		margin: 0 auto;				
+
+		.form-group {
+			margin-bottom: 25px;
+
+			&--links {
+				@include span-columns(12);
+
+				.link-wrapper {
+					@include span-columns(6 of 12);
+				}	
+			}
+		}
+	}
+
+}

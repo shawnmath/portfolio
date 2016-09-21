@@ -1,0 +1,16 @@
+<div class="dashboard__wrapper">
+	<div class="db-work">
+		<div class="db-work__item" ng-repeat="workItem in work">
+			<div class="db-work__item__content">
+				<h4>{{workItem.title}}</h4>
+				<p>{{workItem.summary1}}</p>
+				<p>{{workItem.summary2}}</p>
+				<p>{{workItem.summary3}}</p>
+				<div class="db-work__item__actions">				
+					<a class="db-work__item__actions--btn" href="/#/dashboard/{{workItem._id}}/edit">Edit</a>
+					<a class="db-work__item__actions--btn" href="/#/dashboard/{{workItem._id}}/delete">Delete</a>
+				</div>
+			</div>					
+		</div>
+	</div>
+</div>

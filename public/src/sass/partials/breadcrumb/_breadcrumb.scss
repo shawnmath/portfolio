@@ -1,0 +1,15 @@
+.breadcrumb {
+	@include span-columns(12);
+	@include clearfix;
+	margin-top: 50px;
+	text-align: right;
+	@include media($mobile){
+		text-align: left;
+	}
+
+	&__link {
+		display: inline-block;
+		font-size: 0.8em;
+		border-bottom: 2px solid #fff;
+	}
+}

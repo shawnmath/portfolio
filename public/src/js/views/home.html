@@ -1,0 +1,26 @@
+<section class="home page-content">
+	<div class="home__intro">
+		<h1 class="title">Front End Developer</h1>
+		<p class="message">I work with design teams and agencies to develop web designs using HTML5, CSS3 and Javascript.  Depending on project needs, I also create custom Wordpress themes so clients can manage their own content.  In addition, I setup and audit Google Analytics and Google Tag Manager implementations.</p>
+		<p>I build designs so they are responsive, cross browser and cross platform compatible.  I look to constantly improve my code organization so client sites are easier to maintain.  Sample code is available upon request for review.</p>
+	</div>	
+
+	<div class="work-display">
+		<h2>Client Work</h2>
+		<div class="workItems">			
+			<div class="workItem" ng-repeat="workItem in work | limitTo: limit">
+				<a class="workItem__link" href="/#/work/{{workItem._id}}">					
+					<img ng-src="/imgs/clients/{{workItem.image}}">					
+					<span class="workItem__title">{{workItem.title}}</span>
+				</a>				
+			</div>
+		</div>
+		<div class="view-all-work__wrapper">
+			<a class="btn view-all-work" ui-sref="allWork">
+				<span>View All Client Work</span>
+			</a>
+		</div>
+	</div>
+</section>
+
+<footer class="footer" ui-view="footer"></footer>

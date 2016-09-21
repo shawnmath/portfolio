@@ -1,0 +1,30 @@
+<div class="footer-wrapper">
+	<form class="footer__form">
+		<h2>Contact</h2>
+		<input type="text" name="name" placeholder="name" ng-model="contactData.name">
+		<input type="text" name="email" placeholder="email" ng-model="contactData.email">
+		<textarea name="message" placeholder="message" ng-model="contactData.message"></textarea>
+		<input class="btn btn--send" type="submit" value="send" ng-click="send()">
+	</form>	
+	<div class="footer__confMsg">
+		<p>{{confMsg}}</p>
+	</div>
+</div>
+<div class="footer-wrapper">
+	<div class="footer__bottom">
+		<ul class="contact-info">
+			<li>
+				<a href="mailto:shawn.mathew@gmail.com?subject=Shawnmathew.co%20-%20Regarding%20Your%20Portfolio">shawn.mathew@gmail.com</a>				
+			</li>
+			<li><a class="tel" href="tel:718-473-4359">718-473-4359</a></li>	
+			<li>
+				<i class="fa fa-linkedin-square"></i>
+				<a href="https://www.linkedin.com/in/shawnmathew322" target="_blank">Linkedin</a>
+			</li>
+			<li>
+				<i class="fa fa-file-pdf-o"></i>
+				<a href="#">Resume</a>
+			</li>
+		</ul>
+	</div>
+</div>	

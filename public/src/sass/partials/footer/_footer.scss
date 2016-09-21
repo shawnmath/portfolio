@@ -1,0 +1,151 @@
+.footer {
+	@include span-columns(12);		
+	margin-top: 25px;
+	margin-bottom: 0px;
+	padding: 0 25px;	
+
+
+	&-wrapper {		
+		@include clearfix;			
+
+		&:first-child {
+			padding-top: 40px;
+			padding-bottom: 0;		
+			border-top: 1px solid #fff;	
+			border-bottom: 1px solid #fff;	
+		}
+	}
+
+
+	&__info {
+		@include span-columns(4);
+	}
+
+
+	&__form {
+		@include span-columns(6);		
+		@include media(641px){
+			@include shift(3);
+		}		
+		@include media($mobile){
+			@include span-columns(12);	
+			margin-right: 0;		
+		}
+
+		h2 {
+			text-align: center;
+		}
+
+		input, textarea {
+			background-color: $input-grey;
+			@include border-radius(0);
+			border: none;
+			border-bottom: 2px solid #fff;
+			color: #fff;
+			@include transition(all 0.2s ease-in);
+		}
+
+		input:not(.btn) {
+			@include span-columns(4 of 8);			
+
+			&:hover {
+				border-color: $input-blue;	
+			}
+
+			&[name="email"] {
+				@include omega();
+			}			
+		}	
+
+		.btn {
+			display: block;
+			margin: 0 auto;			
+		}	
+
+		textarea:hover {
+			border-color: $input-blue;
+		}
+
+		input:focus, textarea:focus {
+			border-color: #fff;
+			box-shadow: none;
+		}
+	}
+
+
+	&__confMSg {
+		@include span-columns(6);		
+		min-height: 40px;
+		text-align: center;
+		@include media(641px){
+			@include shift(3);
+		}
+		@include media($mobile){
+			@include span-columns(12);
+		}
+
+		p {
+			font-weight: 400;
+			color: $linkedinBlue;
+			opacity: 0;
+			@include transition(all 1s ease-in);
+			@include media($mobile){
+				font-size: 0.685em;
+			}
+						
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+
+
+	&__bottom {
+		@include clearfix;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		.contact-info {
+			@include span-columns(12);
+			padding: 0;			
+			list-style: none;
+			text-align: center;
+
+			li {
+				@include span-columns(3);				
+				display: inline-block;
+				font-size: 0.8em;
+				@include media($mobile){
+					@include span-columns(12);
+					margin: 5px 0;
+				}
+
+				&:first-child, &:nth-child(2) {
+					text-align: left;
+				}
+
+				&:last-child, &:nth-child(3) {
+					text-align: right;
+					@include media($mobile){
+						text-align: left;	
+					}
+				}
+
+				a {
+				
+					&:hover {
+						color: #fff;
+					}
+
+					&.tel {
+					
+						&:hover {
+							cursor: default;
+						}						
+					}
+				}
+			}
+		}		
+
+	}
+}

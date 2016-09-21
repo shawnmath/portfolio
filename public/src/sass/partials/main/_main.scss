@@ -1,0 +1,30 @@
+html, body {
+	height: auto;
+	min-height: 100%;
+}
+
+
+body {
+	margin: 0;	
+}
+
+
+.main {
+	@include clearfix;
+	margin-top: 95px;
+
+	&-wrapper {
+		@include outer-container;	
+	}
+
+	&.ng-enter {
+		@include transition(all 1s ease-in);
+		opacity: 0;
+	}
+
+	&.ng-enter-active {
+		opacity: 1;
+	}
+
+}
+

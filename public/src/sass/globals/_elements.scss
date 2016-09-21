@@ -1,0 +1,69 @@
+/*---------------------
+GENERAL ELEMENT STYLING
+-----------------------*/
+a {
+	color: inherit;
+
+	&:focus, &:visited {
+		color: inherit;
+	}
+}
+
+
+
+input[type="submit"], button {
+	
+	&.btn {
+
+		&:hover {
+			background-color: $input-blue;
+		}
+	}	
+}
+
+
+
+.btn {
+	position: relative;
+	padding: 6px 12px;
+	margin-right: 15px;
+	border-bottom: 2px solid #fff;
+	@include transition(color 0.75s ease);			
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		background-color: #fff;
+		@include transform-origin(left);
+		@include transition(width 0.5s ease);				
+	}
+
+	&:hover {
+		color: $input-blue;
+		
+		&::after {				
+			width: 100%;
+		}
+	}
+
+	span {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+
+
+/*---------------------
+Page Styles - home, work item
+-----------------------*/
+.page-content {
+	padding: 0 25px;	
+}
+
+
+

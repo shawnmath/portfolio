@@ -1,0 +1,144 @@
+.about {
+	@include clearfix;
+
+
+	&__img {		
+		margin-right: 0;
+		text-align: center;
+		@include media($mobile){
+			display: inline-block;
+			width: 49%;
+			margin-bottom: 25px;
+			text-align: left;
+		}
+
+		&--wrapper {			
+			@include span-columns(4);
+			@include clearfix;
+			@include media($mobile){
+				@include span-columns(12);
+				margin-right: 0;
+			}
+		}
+
+		img {
+			width: 50%;			
+			margin: 0 auto;
+			@include media($phablet){
+				width: 75%;
+			}
+			@include media($mobile){
+				width: 150px;
+			}
+		}		
+	}
+
+
+	&__profile {		
+		text-align: center;
+		@include media($mobile){
+			display: inline-block;
+			width: 49.276%;
+			vertical-align: top;			
+		}
+
+		&__links {
+			width: 50%;
+			margin: 0 auto;
+			background-color: #fff;
+			color: $linkedinBlue;
+			@include media($phablet){
+				width: 75%;
+			}
+			@include media($mobile){
+				width: 100%;
+			}
+
+			a {
+				display: block;
+				padding: 15px 0;				
+
+				&:first-child {
+					border-bottom: 1px dashed #ccc;
+				}
+			}
+		}		
+	}
+
+
+	&__info {
+		@include span-columns(8);	
+		@include media($mobile){
+			@include span-columns(12);	
+		}
+
+		.improvement-list {
+			margin-bottom: 12px;
+		}
+
+		ul {
+			padding-left: 40px;
+			list-style: circle;
+			@include media($mobile){
+				padding-left: 18px;
+			}
+		}		
+	}
+
+
+	.skills {
+		@include span-columns(12);
+		margin-bottom: 12px;
+		@include media($mobile){
+			margin-right: 0;
+		}
+		
+		&--css {
+			margin-bottom: 24px;
+		}
+
+		&__list {
+			@include span-columns(4 of 12);
+			@include omega();
+			display: inline-block;
+			vertical-align: top;
+			@include media($mobile){
+				@include span-columns(6 of 12);
+				@include omega(3n);
+			}
+		}
+	}
+
+
+	.certs {
+
+		&__intro {
+
+			a {
+				text-decoration: underline;
+			}
+		}
+
+		&__logos {
+			@include span-columns(12);
+
+			a {
+				@include span-columns(2 of 12);
+				@include omega(5n);
+				@include media(max-width 400px){
+					&:first-child {
+						@include span-columns(5);
+						float: none;
+						margin-bottom: 5px;
+					}
+					&:not(:first-child){
+						@include span-columns(3 of 12);
+						@include omega(5n);
+						margin-bottom: 5px;
+					}
+					
+				}
+			}
+		}
+	}
+}

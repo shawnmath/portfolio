@@ -1,0 +1,55 @@
+.workItems {
+	@include span-columns(12);	
+	@include media($mobile){
+		margin-right: 0;
+	}
+
+	.workItem {
+		position: relative;
+		@include span-columns(3);
+		@include omega(4n);
+		margin-bottom: 2.35765%;
+		@include media($phablet){
+			@include span-columns(6);
+			@include omega(2n);
+			margin-bottom: 25px;
+		}
+		@include media($mobile){
+			@include span-columns(12);
+			margin-bottom: 25px;
+			margin-right: 0;
+		}
+
+		&:hover {
+
+			img {
+    			opacity: 0.7;
+			}			
+		}
+
+		&__link {
+			display: block;	
+
+			&:hover {
+				color: #fff;
+			}		
+		}
+
+		img {			
+    		@include transition(all 0.3s ease);    		
+    		opacity: 0.4;
+		}
+
+		&__title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+			font-size: 1.15em;
+			text-shadow: 1px -3px 3px #000;
+			@include media(min-width 981px max-width 1200px){
+				font-size: 1em;
+			}
+		}
+	}
+}

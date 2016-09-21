@@ -1,0 +1,39 @@
+/*---------------------
+MANIFEST FILE
+-----------------------*/
+// DECLARATION ORDER
+// Positioning - position, top, bottom, right, left, z-index
+// Box-Model - display, float, width, height, margin, padding
+// Typography - font, line-height, color, text-align
+// Visual - background-color, border
+// Misc - opacity, etc
+
+
+// DEPENDENCIES
+@import "libs/bourbon/_bourbon.scss";
+@import "libs/base/_base.scss";
+@import "libs/neat/_neat.scss";
+
+
+// GLOBALS
+@import "globals/_breakpoints.scss";
+@import "globals/_colors.scss";
+@import "globals/_fonts.scss";
+@import "globals/_typography.scss";
+@import "globals/_mixins.scss";
+@import "globals/_elements.scss";
+
+//PARTIALS
+@import "partials/main/_main.scss";
+@import "partials/nav/_nav.scss";
+@import "partials/nav/_burger.scss";
+@import "partials/home/_home.scss";
+@import "partials/footer/_footer.scss";
+@import "partials/work/_work-items.scss";
+@import "partials/work/_work.scss";
+@import "partials/about/_about.scss";
+@import "partials/auth/_auth.scss";
+@import "partials/dashboard/_dashboard.scss";
+@import "partials/dashboard/_dashboard-form.scss";
+@import "partials/dashboard/_dashboard-add.scss";
+@import "partials/breadcrumb/_breadcrumb.scss";

@@ -1,0 +1,25 @@
+<div class="nav-wrapper">
+	<div class="name">
+		<a ui-sref="home">Shawn Mathew</a>
+	</div>
+	<div class="menu">		
+		<ul class="menu__links">
+			<li class="menu__links__link menu__links__link--home" ng-class="{current: currentPage === 'home'}" ng-click="hideMenu()">
+				<a ui-sref="home">Home</a>
+			</li>
+			<li class="menu__links__link" ng-click="hideMenu()" ng-class="{current: currentPage === 'allWork'}">
+				<a ui-sref="allWork">Work</a>
+			</li>
+			<li class="menu__links__link" ng-click="hideMenu()" ng-class="{current: currentPage === 'about'}">
+				<a ui-sref="about">About</a>
+			</li>
+			<li class="menu__links__link" ng-click="goToContact(); hideMenu()">Contact</li>
+		</ul>
+	</div>
+
+</div>
+<div class="burger" ng-click="showMenu()">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>

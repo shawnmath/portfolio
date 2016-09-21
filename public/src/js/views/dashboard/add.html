@@ -1,0 +1,38 @@
+<section class="db-form db-form--add">
+	<div class="db-form__form">
+		<h3 class="db-form__title">Add New Work Item</h3>
+		<form>
+			<div class="form-group">
+				<label>Title</label>
+				<input type="text" name="title" ng-model="workItem.title">
+			</div>
+			<div class="form-group">
+				<label>Summary 1</label>
+				<textarea name="summary1" ng-model="workItem.summary1"></textarea>
+			</div>
+			<div class="form-group">
+				<label>Summary 2</label>
+				<textarea name="summary2" ng-model="workItem.summary2"></textarea>
+			</div>
+			<div class="form-group">
+				<label>Summary 3</label>
+				<textarea name="summary3" ng-model="workItem.summary3"></textarea>
+			</div>
+			<div class="form-group">
+				<label>Image</label>
+				<input type="text" name="image" ng-model="workItem.image">
+			</div>
+			<div class="form-group form-group--links">
+				<div class="link-wrapper">
+					<label>Link To Website</label>
+					<input type="text" name="linkToSite" ng-model="workItem.linkToSite">	
+				</div>
+				<div class="link-wrapper">
+					<label>Link To Code</label>
+					<input type="text" name="linkToCode" ng-model="workItem.linkToCode">
+				</div>
+			</div>
+			<input type="submit" ng-click="save()" value="Add">
+		</form>	
+	</div>	
+</section>
