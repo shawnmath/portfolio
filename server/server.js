@@ -18,9 +18,6 @@ var routes = require('./routes/index'),
 var app = express();
 
 //CONNECT DB
-// mongodb://shawn:portfolio@ds035846.mlab.com:35846/smathew_portfolio
-//mongoose.connect('mongodb://localhost:27017/portfolio');
-//mongoose.connect('mongodb://shawn:portfolio@ds035846.mlab.com:35846/smathew_portfolio');
 var dbURL = process.env.DBURL || config.db.url;
 mongoose.connect(dbURL);
 
