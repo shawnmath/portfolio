@@ -15,27 +15,19 @@ angular.module("portfolio")
 			// Limit work items to first 4 on homepage
 			$scope.limit = 4;
 
-			// angular.element( document.querySelectorAll(".workItem__link img") ).ready(function(){
-			// 	console.log("loaded..");
-				
-			// 	$scope.loadImgs();
-				
-			// });
-
 			// Fade In Imgs
 			$scope.init = function(){
 				$(document).ready(function(){
 					$(".workItem__link img").each(function(indx){					
-					var imgSrc = $(this).attr("data-img-src");
-					console.log(imgSrc);
-					$(this)
-						.delay(indx * 250)
-						.attr( "src", imgSrc )
-						//.removeClass("placeholder")
-						.animate({
-							"opacity": 0.4
-						}, 500);
-				});
+						var imgSrc = $(this).attr("data-img-src");												
+
+						$(this).attr( "src", imgSrc );
+						$(this).parent()
+							.delay(indx * 250)
+							.animate({
+								"opacity": 1								
+							}, 500);
+					});
 				});
 				
 			}; 

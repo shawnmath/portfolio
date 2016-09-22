@@ -1,14 +1,20 @@
 .workItems {
-	@include span-columns(12);	
+	@include span-columns(12);		
 	@include media($mobile){
 		margin-right: 0;
+	}
+
+	&--all {
+		@include media(641px){
+			min-height: 100%;
+		}
 	}
 
 	.workItem {
 		position: relative;
 		@include span-columns(3);
-		@include omega(4n);
-		margin-bottom: 2.35765%;
+		@include omega(4n);		
+		margin-bottom: 2.35765%;		
 		@include media($phablet){
 			@include span-columns(6);
 			@include omega(2n);
@@ -29,6 +35,7 @@
 
 		&__link {
 			display: block;	
+			opacity: 0;
 
 			&:hover {
 				color: #fff;
@@ -39,7 +46,7 @@
     		/*@include transition(all 0.3s ease);    		
     		opacity: 0.4;
     		background-image: url("data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0M7P4AgAC6AGa7QAUiwAAAABJRU5ErkJggg==");*/
-    		opacity: 0;
+    		opacity: 0.4;
 
     		&.placeholder {
     			width: 260px;

@@ -1,13 +1,11 @@
-<!-- src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0M7P4AgAC6AGa7QAUiwAAAABJRU5ErkJggg==" -->
-<!-- ng-src="/imgs/clients/{{workItem.image}}" -->
 <section class="allWork page-content">
 	<h2>Client Work</h2>
 	<p class="allWork__intro">Below you'll find client sites I've worked on while working as a front end developer at Baldwin & Obenauf, Inc. (a creative agency) along with my work as a freelance developer to 2 design studios.  My contribution on these projects include HTML5, CSS3, Javascript development, Wordpress custom theme development and Google Analytics setup or audit.  View details by clicking on a work item.
 	</p>	
-	<div class="workItems">			
+	<div class="workItems workItems--all">			
 		<div class="workItem" ng-repeat="workItem in work">
 			<a class="workItem__link" href="/#/work/{{workItem._id}}">					
-				<img class="placeholder" data-img-src="/imgs/clients/{{workItem.image}}">					
+				<img data-img-src="/imgs/clients/{{workItem.image}}">					
 				<span class="workItem__title">{{workItem.title}}</span>
 			</a>				
 		</div>
