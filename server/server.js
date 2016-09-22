@@ -23,7 +23,6 @@ mongoose.connect(dbURL);
 
 mongoose.connection.on('open', function (ref) {
 	console.log('Connected to Mongo server...');
-	console.log(dbURL);
 });
 
 mongoose.connection.on('error', function (err) {
