@@ -705,16 +705,19 @@ body {
         .workItems .workItem:last-child {
           margin-right: 0; } }
     .workItems .workItem:hover img {
-      opacity: 0.7; }
+      opacity: 0.7 !important; }
     .workItems .workItem__link {
       display: block; }
       .workItems .workItem__link:hover {
         color: #fff; }
     .workItems .workItem img {
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-      opacity: 0.4; }
+      /*@include transition(all 0.3s ease);    		
+      opacity: 0.4;
+      background-image: url("data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0M7P4AgAC6AGa7QAUiwAAAABJRU5ErkJggg==");*/
+      opacity: 0; }
+      .workItems .workItem img.placeholder {
+        width: 260px;
+        height: 156px; }
     .workItems .workItem__title {
       position: absolute;
       top: 50%;
