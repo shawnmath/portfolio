@@ -17,16 +17,30 @@ angular.module("portfolio")
 
 			// Fade In Imgs
 			$scope.init = function(){
-				$(document).ready(function(){
-					$(".workItem__link img").each(function(indx){					
-						var imgSrc = $(this).attr("data-img-src");												
+				$(document).ready(function(){					
 
+					$(".workItem__link img").each(function(indx){					
+						var imgSrc = $(this).attr("data-img-src");
 						$(this).attr( "src", imgSrc );
-						$(this).parent()
-							.delay(indx * 250)
-							.animate({
-								"opacity": 1								
-							}, 500);
+						$(this).on("load", function(){
+							var d = new Date(),
+								t = d.getTime();
+							console.log( $(this).attr("src") + ": " + t );						
+
+							$(this).parent()
+								.delay(indx * 250)
+								.animate({
+									"opacity": 1								
+								}, 500);
+						});
+
+						// var imgSrc = $(this).attr("data-img-src");
+						// $(this).attr( "src", imgSrc );
+						// $(this).parent()
+						// 	.delay(indx * 250)
+						// 	.animate({
+						// 		"opacity": 1								
+						// 	}, 500);
 					});
 				});
 				

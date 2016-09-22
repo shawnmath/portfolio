@@ -670,7 +670,7 @@ body {
       margin-right: 0; } }
   @media screen and (min-width: 641px) {
     .workItems--all {
-      min-height: 100%; } }
+      min-height: 500px; } }
   .workItems .workItem {
     position: relative;
     float: left;
