@@ -20,10 +20,14 @@ var app = express();
 //CONNECT DB
 // mongodb://shawn:portfolio@ds035846.mlab.com:35846/smathew_portfolio
 //mongoose.connect('mongodb://localhost:27017/portfolio');
-mongoose.connect('mongodb://shawn:portfolio@ds035846.mlab.com:35846/smathew_portfolio');
+//mongoose.connect('mongodb://shawn:portfolio@ds035846.mlab.com:35846/smathew_portfolio');
+var dbURL = process.env.DBURL || config.db.url;
+mongoose.connect(dbURL);
 
 mongoose.connection.on('open', function (ref) {
-  console.log('Connected to Mongo server...');
+	console.log('Connected to Mongo server...');
+	console.log("DBURL: " + process.env.DBURL);
+	console.log(dbURL);
 });
 
 mongoose.connection.on('error', function (err) {
@@ -60,7 +64,7 @@ app.use('/api/work', work);
 app.use('/dashboard', dashboard);
 
 //SERVER
-var port = process.env.PORT || config.port
+var port = process.env.PORT || config.db.port;
 app.listen(port, function(){
 	console.log('SERVER STARTED');
 });

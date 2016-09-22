@@ -1,6 +1,9 @@
 var config = {
 
-	port: 3000,
+	db: {
+		port: 3000,
+		url: 'mongodb://localhost:27017/portfolio'		
+	},	
 
 	gmail: {
 		user: "shawn.mathew@gmail.com",
