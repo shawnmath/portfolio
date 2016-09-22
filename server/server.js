@@ -4,7 +4,8 @@ var express = require('express'),
 	bodyParser = require('body-parser'),	
 	mongoose = require('mongoose'),
 	passport = require('passport'),
-	localStrategy = require('passport-local');
+	localStrategy = require('passport-local')
+	config = require('./config');
 
 var User = require('./models/user');
 
@@ -59,7 +60,8 @@ app.use('/api/work', work);
 app.use('/dashboard', dashboard);
 
 //SERVER
-app.listen(3000, function(){
+var port = process.env.PORT || config.port
+app.listen(port, function(){
 	console.log('SERVER STARTED');
 });
 
