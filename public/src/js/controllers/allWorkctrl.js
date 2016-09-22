@@ -24,9 +24,14 @@ angular.module("portfolio")
 						$(this).attr( "src", imgSrc );
 					});
 
-					$(".workItem__link").animate({
-						"opacity": 1								
-					}, 2000);		
+					$(".workItem__link").each(function(indx){
+						$(this)
+							.delay(indx * 250)
+							.animate({
+								"opacity": 1								
+							}, 2500);		
+					});
+					
 
 					// $(".workItem__link img").each(function(indx){					
 					// 	var imgSrc = $(this).attr("data-img-src");
