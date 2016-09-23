@@ -20,7 +20,7 @@ angular.module("portfolio")
 			"Google Analytics"
 		];
 
-		var split = 3,
+		var split = ( $(window).outerWidth() > 640 ) ? 3 : 2,
 			start = 0,
 			stop = Math.ceil(skills_list.length / split);
 
