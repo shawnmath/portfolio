@@ -550,6 +550,11 @@ body {
     .footer__form h2 {
       text-align: center; }
     .footer__form input, .footer__form textarea {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
       background-color: #2f2e2e;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;

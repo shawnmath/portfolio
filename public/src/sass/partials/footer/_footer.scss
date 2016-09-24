@@ -37,6 +37,7 @@
 		}
 
 		input, textarea {
+			@include appearance(none);
 			background-color: $input-grey;
 			@include border-radius(0);
 			border: none;
