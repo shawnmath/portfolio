@@ -24,13 +24,25 @@ angular.module("portfolio")
 						$(this).attr( "src", imgSrc );
 					});
 
-					$(".workItem__link").each(function(indx){
-						$(this)
-							.delay(indx * 250)
-							.animate({
-								"opacity": 1								
-							}, 2000);		
-					});				
+					// $(".workItem__link").each(function(indx){
+					// 	$(this)
+					// 		.delay(indx * 250)
+					// 		.animate({
+					// 			"opacity": 1								
+					// 		}, 2000);		
+					// });
+
+					$(".workItem__link img").on("load", function(){
+						console.log( $(this).attr("src") );
+
+						$(".workItem__link").each(function(indx){
+							$(this)
+								.delay(indx * 250)
+								.animate({
+									"opacity": 1								
+								}, 2000);		
+						});
+					});			
 				});				
 			}; 
 
