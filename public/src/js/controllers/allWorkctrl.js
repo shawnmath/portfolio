@@ -21,8 +21,19 @@ angular.module("portfolio")
 
 					$(".workItem__link img").each(function(indx){
 						var imgSrc = $(this).attr("data-img-src");
-						$(this).attr( "src", imgSrc );
-					});
+						$(this).attr( "src", imgSrc );						
+
+						$(this).on("load", function(){
+							if( $(this).get(0).complete ){							
+								$(this).parent()
+									.delay(indx * 100)
+									.animate({
+										"opacity": 1
+									}, 1500);
+							}
+						});
+						
+					});					
 
 					// $(".workItem__link").each(function(indx){
 					// 	$(this)
@@ -32,17 +43,24 @@ angular.module("portfolio")
 					// 		}, 2000);		
 					// });
 
-					$(".workItem__link img").on("load", function(){
-						console.log( $(this).attr("src") );
+					// $(".workItem__link img").on("load", function(){						
+					// 	var img = $(this);
 
-						$(".workItem__link").each(function(indx){
-							$(this)
-								.delay(indx * 250)
-								.animate({
-									"opacity": 1								
-								}, 2000);		
-						});
-					});			
+					// 	if( img.complete ){
+					// 		$(this).parent()								
+					// 			.animate({
+					// 				"opacity": 1
+					// 			}, 2000);
+					// 	}
+
+					// 	// $(".workItem__link").each(function(indx){
+					// 	// 	$(this)
+					// 	// 		.delay(indx * 250)
+					// 	// 		.animate({
+					// 	// 			"opacity": 1								
+					// 	// 		}, 2000);		
+					// 	// });
+					// });			
 				});				
 			}; 
 
