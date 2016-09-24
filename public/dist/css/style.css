@@ -858,7 +858,7 @@ Work Item Page
   @media screen and (max-width: 640px) {
     .about__img {
       display: inline-block;
-      width: 49%;
+      width: 48.8%;
       margin-bottom: 25px;
       text-align: left; } }
   .about__img--wrapper {
