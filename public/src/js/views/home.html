@@ -10,7 +10,7 @@
 		<div class="workItems">			
 			<div class="workItem" ng-repeat="workItem in work | limitTo: limit">
 				<a class="workItem__link" href="/#/work/{{workItem._id}}">					
-					<img ng-src="/imgs/clients/{{workItem.image}}">					
+					<img data-img-src="/imgs/clients/{{workItem.image}}">					
 					<span class="workItem__title">{{workItem.title}}</span>
 				</a>				
 			</div>

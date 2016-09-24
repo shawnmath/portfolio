@@ -29,7 +29,7 @@ angular.module("portfolio")
 							.delay(indx * 250)
 							.animate({
 								"opacity": 1								
-							}, 2500);		
+							}, 2000);		
 					});				
 				});				
 			}; 
