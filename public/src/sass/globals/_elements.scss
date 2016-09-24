@@ -43,11 +43,13 @@ input[type="submit"], button {
 	}
 
 	&:hover {
-		color: $input-blue;
+		@include media(1024px){
+			color: $input-blue;
 		
-		&::after {				
-			width: 100%;
-		}
+			&::after {				
+				width: 100%;
+			}
+		}		
 	}
 
 	span {
