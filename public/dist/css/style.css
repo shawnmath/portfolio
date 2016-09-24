@@ -263,7 +263,7 @@ input[type="submit"].btn:hover, button.btn:hover {
       color: #11519a; }
       .btn:hover::after {
         width: 100%; } }
-  .btn:active, .btn:focuse {
+  .btn:active, .btn:visited, .btn:focus {
     color: #fff; }
   .btn span {
     position: relative;

@@ -52,7 +52,7 @@ input[type="submit"], button {
 		}		
 	}
 
-	&:active, &:focuse {
+	&:active, &:visited, &:focus {
 		color: #fff;
 	}
 
