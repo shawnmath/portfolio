@@ -31,36 +31,8 @@ angular.module("portfolio")
 										"opacity": 1
 									}, 1500);
 							}
-						});
-						
+						});						
 					});					
-
-					// $(".workItem__link").each(function(indx){
-					// 	$(this)
-					// 		.delay(indx * 250)
-					// 		.animate({
-					// 			"opacity": 1								
-					// 		}, 2000);		
-					// });
-
-					// $(".workItem__link img").on("load", function(){						
-					// 	var img = $(this);
-
-					// 	if( img.complete ){
-					// 		$(this).parent()								
-					// 			.animate({
-					// 				"opacity": 1
-					// 			}, 2000);
-					// 	}
-
-					// 	// $(".workItem__link").each(function(indx){
-					// 	// 	$(this)
-					// 	// 		.delay(indx * 250)
-					// 	// 		.animate({
-					// 	// 			"opacity": 1								
-					// 	// 		}, 2000);		
-					// 	// });
-					// });			
 				});				
 			}; 
 

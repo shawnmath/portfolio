@@ -681,9 +681,15 @@ body {
   @media screen and (max-width: 640px) {
     .workItems {
       margin-right: 0; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .workItems {
+      min-height: 475px; } }
   @media screen and (min-width: 641px) {
     .workItems--all {
       min-height: 500px; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .workItems--all {
+      min-height: 600px; } }
   .workItems .workItem {
     position: relative;
     float: left;

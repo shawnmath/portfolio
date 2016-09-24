@@ -3,10 +3,22 @@
 	@include media($mobile){
 		margin-right: 0;
 	}
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : portrait) {
+		min-height: 475px;
+	}
 
 	&--all {
 		@include media(641px){
 			min-height: 500px;
+		}
+		@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px) 
+		and (orientation : portrait) {
+			min-height: 600px;	
 		}
 	}
 
@@ -14,12 +26,12 @@
 		position: relative;
 		@include span-columns(3);
 		@include omega(4n);		
-		margin-bottom: 2.35765%;		
+		margin-bottom: 2.35765%;				
 		@include media($phablet){
 			@include span-columns(6);
 			@include omega(2n);
 			margin-bottom: 25px;
-		}
+		}		
 		@include media($mobile){
 			@include span-columns(12);
 			margin-bottom: 25px;
