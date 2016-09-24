@@ -12,14 +12,13 @@ angular.module("portfolio")
 				ContactSvc.save($scope.contactData, function(data){										
 					$scope.confMsg = data.message;
 
+					$(".footer__confMsg p").addClass("active");
+					
 					if( data.status === "success" ){
-						$(".footer__form input[type='text'], .footer__form textarea").val("");
-						$(".footer__confMsg p").addClass("active");
+						$(".footer__form input[type='text'], .footer__form textarea").val("");						
 						setTimeout(function(){							
 							$(".footer__confMsg p").removeClass("active");
 						}, 5000);
-
-
 					}					
 				});	
 			};
