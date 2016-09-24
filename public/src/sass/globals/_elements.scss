@@ -44,7 +44,7 @@ input[type="submit"], button {
 	}
 
 	&:hover {		
-		@include media(1024px){
+		@include media(1025px){
 			color: $input-blue;
 		
 			&::after {				
