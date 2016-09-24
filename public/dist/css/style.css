@@ -264,6 +264,9 @@ input[type="submit"].btn:hover, button.btn:hover {
       color: #11519a; }
       .btn:hover::after {
         width: 100%; } }
+  @media screen and (max-width: 1024px) {
+    .btn:hover {
+      color: #fff; } }
   .btn:visited, .btn:active {
     color: #fff; }
   .btn span {

@@ -43,14 +43,17 @@ input[type="submit"], button {
 		@include transition(width 0.5s ease);				
 	}
 
-	&:hover {
+	&:hover {		
 		@include media(1024px){
 			color: $input-blue;
 		
 			&::after {				
 				width: 100%;
 			}
-		}		
+		}	
+		@include media(max-width 1024px){
+			color: #fff;
+		}	
 	}
 
 	&:visited, &:active {
