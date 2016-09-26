@@ -6,8 +6,8 @@ var config = {
 	},	
 
 	gmail: {
-		user: "shawn.mathew@gmail.com",
-		pw: "SMChanakya322!@#"
+		user: "shawndevportfolio@gmail.com",
+		pw: "chanakya322!@#"
 	}
 
 };
