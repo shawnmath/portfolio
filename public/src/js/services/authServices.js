@@ -10,7 +10,7 @@ angular.module("portfolio")
 	.service("RegisterSvc", ["$resource", function($resource){
 		return $resource("/register");
 	}])
-	.service("UserStatus", ["$resource", "$rootScope", function($resource, $rootScope){
+	.service("UserStatus", ["$resource", function($resource){
 
 		var getUserStatus = function(){
 			var getStatus = $resource("/user-status");
