@@ -2,11 +2,9 @@
 
 angular.module("portfolio")
 	.controller("ContactCtrl", [
-		"$scope", 
-		"$state",
-		"$location",
+		"$scope",
 		"ContactSvc", 
-		function($scope, $state, $location, ContactSvc){					
+		function($scope, ContactSvc){					
 
 			$scope.send = function(){				
 				ContactSvc.save($scope.contactData, function(data){										

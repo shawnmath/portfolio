@@ -2,12 +2,11 @@
 
 angular.module("portfolio")
 	.controller("DashboardCtrl", [
-		"$scope", 
-		"$stateParams",
+		"$scope", 		
 		"$location",
 		"GetAllWork", 
 		"GetWorkItem", 
-		function($scope, $stateParams, $location, GetAllWork, GetWorkItem){
+		function($scope, $location, GetAllWork, GetWorkItem){
 
 			// Dashboard Index Page - display list of work items
 			GetAllWork.query(function(work){		
@@ -19,7 +18,6 @@ angular.module("portfolio")
 				GetAllWork.save($scope.workItem, function(){
 					$location.path("/dashboard");
 				});
-				console.log($scope.workItem);
 			};
 
 	}]);

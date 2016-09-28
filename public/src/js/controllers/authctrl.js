@@ -8,44 +8,25 @@ angular.module("portfolio")
 		"LoginSvc", 
 		"LogoutSvc",
 		"RegisterSvc", 
-		"UserStatus",
-		function($scope, $state, $location, LoginSvc, LogoutSvc, RegisterSvc, UserStatus){		
-
-			console.log($state.current.name);
+		function($scope, $state, $location, LoginSvc, LogoutSvc, RegisterSvc){		
 
 			if( $state.current.name === "logout" ){
-				LogoutSvc.get({}, function(data){					
-					console.log(data.status);
-					UserStatus.getUserStatus().$promise.then(function(userStatus){
-						console.log("from ctrl - logged out: " + userStatus.status);
-					});
+				LogoutSvc.get({}, function(data){										
 					$location.path("/");
 				});
 			}
 
 			$scope.register = function(){
-				RegisterSvc.save($scope.registerData, function(data){
-					console.log(data.status);
-					UserStatus.getUserStatus().$promise.then(function(userStatus){
-						console.log("from ctrl - registered: " + userStatus.status);
-					});
+				RegisterSvc.save($scope.registerData, function(data){					
 					$location.path("/");
 				});	
 			};
 
 			$scope.login = function(){
-				LoginSvc.save($scope.loginData, function success(response){
-					console.log(response.status);
-					UserStatus.getUserStatus().$promise.then(function(userStatus){
-						console.log("from ctrl - logged in: " + userStatus.status);
-					});
+				LoginSvc.save($scope.loginData, function success(response){					
 					$location.path("/dashboard");
 				}, function error(response){					
-					console.log(response);
-					console.log(response.err);
 					$location.path("/");
 				});
 			};
-	
-
 	}]);

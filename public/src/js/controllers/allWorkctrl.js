@@ -2,11 +2,9 @@
 
 angular.module("portfolio")
 	.controller("AllWorkCtrl", [
-		"$state",
-		"$rootScope",
 		"$scope", 
 		"GetAllWork", 
-		function($state, $rootScope, $scope, GetAllWork){		
+		function($scope, GetAllWork){		
 
 			GetAllWork.query(function(work){		
 				$scope.work = work;				

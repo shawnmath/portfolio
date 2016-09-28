@@ -2,10 +2,9 @@
 
 angular.module("portfolio")
 	.controller("NavCtrl", [
-		"$rootScope", 
 		"$scope", 
 		"$state", 
-		function($rootScope, $scope, $state){
+		function($scope, $state){
 				
 			// Set page type & current page
 			$scope.$on("$stateChangeSuccess", function(){
