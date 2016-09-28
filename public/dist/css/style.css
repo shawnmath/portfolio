@@ -489,6 +489,8 @@ body {
       @media screen and (max-width: 640px) {
         .home__intro .title {
           font-size: 1.7em; } }
+    .home__intro .github_link {
+      color: #35df79; }
 
 .work-display {
   float: left;
