@@ -1,7 +1,9 @@
 "use strict";
 
 angular.module("mainRoutes", ["ui.router"])
-	.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider){
+	.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", function($stateProvider, $locationProvider, $urlRouterProvider){
+
+		$locationProvider.html5Mode({enabled: true, requireBase: false});
 
 		$urlRouterProvider.otherwise("/");
 

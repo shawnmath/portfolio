@@ -3,8 +3,6 @@
 angular.module("dashboardRoutes", ["ui.router"])
 	.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider){
 
-		$urlRouterProvider.otherwise("/");
-
 		$stateProvider
 			.state("dashboard", {
 				url: "/dashboard",

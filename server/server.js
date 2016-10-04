@@ -9,11 +9,9 @@ var express = require('express'),
 
 var User = require('./models/user');
 
-var routes = require('./routes/index'),
-	work = require('./routes/work.js'),
+var work = require('./routes/work.js'),
 	auth = require('./routes/auth.js'),
-	contact = require('./routes/contact.js'),
-	dashboard = require('./routes/dashboard.js');
+	contact = require('./routes/contact.js');
 
 var app = express();
 
@@ -53,10 +51,12 @@ passport.deserializeUser(User.deserializeUser());
 
 //ROUTES MIDDLEWARE
 app.use(auth);
-app.use('/', routes);
 app.use('/form', contact);
 app.use('/api/work', work);
-app.use('/dashboard', dashboard);
+
+app.all("/*", function(req, res, next){
+	res.sendFile(path.join(__dirname, '../public', 'index.html'));
+});
 
 //SERVER
 var port = process.env.PORT || config.db.port;
