@@ -28,10 +28,6 @@ mongoose.connection.on('error', function (err) {
   console.log(err);
 });
 
-//VIEW ENGINE SETUP
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
 //MIDDLEWARE
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -57,6 +53,7 @@ app.use('/api/work', work);
 app.all("/*", function(req, res, next){
 	res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
+
 
 //SERVER
 var port = process.env.PORT || config.db.port;

@@ -1,7 +1,11 @@
 "use strict";
 
 angular.module("portfolio", ["ngResource", "ngAnimate", "mainRoutes", "dashboardRoutes"])
-	.run(["$rootScope", "$state", "$location", "UserStatus", function($rootScope, $state, $location, UserStatus){
+	.run([
+		"$rootScope", 
+		"$state",  
+		"$location", 
+		"UserStatus", function($rootScope, $state, $location, UserStatus){
 		$rootScope.$on("$stateChangeStart", function(event, toState, fromState){
 			var restricted = ( toState.data ) ? toState.data.restricted : false;
 									

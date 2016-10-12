@@ -2,8 +2,8 @@
 
 angular.module("mainRoutes", ["ui.router"])
 	.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", function($stateProvider, $locationProvider, $urlRouterProvider){
-
-		$locationProvider.html5Mode({enabled: true, requireBase: false});
+		
+		$locationProvider.html5Mode();
 
 		$urlRouterProvider.otherwise("/");
 
