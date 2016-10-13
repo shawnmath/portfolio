@@ -1097,9 +1097,9 @@ Work Item Page
       border-bottom: 1px solid #a7a7a7; }
       .db-work__item__content:last-child {
         margin-right: 0; }
-    .db-work__item__content h4 {
-      margin-top: 0;
-      text-decoration: underline; }
+      .db-work__item__content h4 {
+        margin-top: 0;
+        text-decoration: underline; }
     .db-work__item__actions--btn {
       display: inline-block;
       width: 150px;
