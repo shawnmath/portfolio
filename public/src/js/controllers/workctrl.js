@@ -7,7 +7,7 @@ angular.module("portfolio")
 		"GetWorkItem", 
 		function($scope, $stateParams, GetWorkItem){
 
-			GetWorkItem.get({id: $stateParams.id}, function(work){		
+			GetWorkItem.get({title: $stateParams.id}, function(work){		
 				$scope.work = work;
 			});
 

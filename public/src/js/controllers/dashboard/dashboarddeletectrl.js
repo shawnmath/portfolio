@@ -9,13 +9,13 @@ angular.module("portfolio")
 		function($scope, $stateParams, $location, GetWorkItem){
 
 			// Get Work Item
-			GetWorkItem.get({id: $stateParams.id}, function(workItem){		
+			GetWorkItem.get({title: $stateParams.id}, function(workItem){		
 				$scope.workItem = workItem;							
 			});
 
 			// Update Work Item			
 			$scope.delete = function(){
-				GetWorkItem.remove({id: $stateParams.id}, function(){
+				GetWorkItem.remove({title: $stateParams.id}, function(){
 					$location.path("/dashboard");
 				});				
 			};

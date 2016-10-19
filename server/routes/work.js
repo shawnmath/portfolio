@@ -33,8 +33,9 @@ router.post('/', function(req, res){
 });
 
 // GET - individual work item
-router.get('/:id', function(req, res){
-	Work.findOne({_id: req.params.id}, function(err, work){
+router.get('/:title', function(req, res){
+	console.log(req.params.title);
+	Work.findOne({title: req.params.title}, function(err, work){
 		if(err){
 			console.log(err);
 		} else {
@@ -44,24 +45,28 @@ router.get('/:id', function(req, res){
 });
 
 // UPDATE - edit a work item
-router.put('/:id', function(req, res){
-	Work.findByIdAndUpdate({ _id: req.params.id }, {
-		title: req.body.title,
-		summary1: req.body.summary1,
-		summary2: req.body.summary2,
-		summary3: req.body.summary3,
-		image: req.body.image,
-		linkToSite: req.body.linkToSite,
-		linkToCode: req.body.linkToCode
-	}, function(err, work){
+router.put('/:title', function(req, res){
+	console.log('title:' + req.params.title);
+	console.log('bodyTitle:' + req.body.title);
+	Work.findOneAndUpdate({ title: req.params.title }, {
+		$set : {
+			title: req.body.title,
+			summary1: req.body.summary1,
+			summary2: req.body.summary2,
+			summary3: req.body.summary3,
+			image: req.body.image,
+			linkToSite: req.body.linkToSite,
+			linkToCode: req.body.linkToCode	
+		}		
+	}, {$new: true}, function(err, work){
 		if (err) throw err;
 		res.json(work);
 	});
 });	
 
 // DELETE - delete a work item 
-router.delete('/:id', function(req, res){
-	Work.findByIdAndRemove({ _id: req.params.id }, function(err, work){
+router.delete('/:title', function(req, res){
+	Work.findOneAndRemove({ title: req.params.title }, function(err, work){
 		if (err) throw err;
 		res.json(work);
 	});
