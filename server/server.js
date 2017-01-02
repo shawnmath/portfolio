@@ -4,7 +4,7 @@ var express = require('express'),
 	bodyParser = require('body-parser'),	
 	mongoose = require('mongoose'),
 	passport = require('passport'),
-	localStrategy = require('passport-local')
+	localStrategy = require('passport-local'),
 	config = require('./config');
 
 var User = require('./models/user');
