@@ -16,7 +16,7 @@ angular.module("portfolio")
 			"PHP",
 			"Wordpress",
 			"Git",
-			"Grunt",
+			"Grunt, Gulp",
 			"Google Analytics"
 		];
 
