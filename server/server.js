@@ -5,7 +5,8 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	passport = require('passport'),
 	localStrategy = require('passport-local'),
-	config = require('./config');
+	config = require('./config'),
+	http = require('http');
 
 var User = require('./models/user');
 
@@ -61,5 +62,8 @@ app.listen(port, function(){
 	console.log('SERVER STARTED');
 });
 
-
+// Ping Heroku server every 5 min. to keep app awake
+setInterval(function(){
+	http.get('http://shawnportfolio.herokuapp.com');
+}, 300000);
 
