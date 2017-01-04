@@ -1,5 +1,4 @@
 .sass-cache/
 *.css.map
 node_modules/
-/server/config.js
 /server/npm-debug.log
