@@ -1,3 +1,3 @@
 # portfolio
-My portfolio site built using the MEAN stack. 
+My portfolio site built using the MEAN stack.#
 http://shawnmathew.co
